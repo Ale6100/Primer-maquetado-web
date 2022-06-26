@@ -1,0 +1,37 @@
+header{
+    margin-bottom: 10px;
+    background-color: $bg-color-header-footer;
+    .navbar{
+        .container-fluid{
+            .d-flex{
+                .navbar-brand{
+                    .positionImg{
+                        position:relative;
+                        left: 7px;
+                    }
+                }
+
+                .positionApoyo{
+                    position: relative;
+                    top: 8px;
+                }
+            }
+
+            #navbarNav{
+                .navbar-nav{
+                    .nav-item{
+                        @media screen and (min-width: 1200px){
+                            padding: 0px 10px; 
+                        }
+                        
+                        .nav-link{
+                            @media screen and (min-width: 1200px){
+                                border-radius: 5px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,279 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px;
+  /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/ }
+  html body {
+    display: flex;
+    /*el body es un contenedor compuesto por el header, main y footer*/
+    flex-direction: column;
+    /*los elementos hijos se organizarán en una sola columna*/
+    background-color: #2d6996; }
+
+h1, h2, h3, h4 {
+  /*Defino estos h acá ya que quiero que todos los h que uso (de 1 a 4) inicien con estas propiedades*/
+  text-align: center;
+  margin: 0px;
+  color: black; }
+
+@media screen and (min-width: 1200px) {
+  /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
+  .seleccion {
+    background-color: blue; }
+  .hoverr {
+    transition: all 0.5s; }
+    .hoverr:hover {
+      background-color: #56568b; }
+    .hoverr:active {
+      /*cambié focus por active*/
+      background-color: #00c8c8;
+      color: black; } }
+
+/*importo "base" que actualmente solo la uso para definir variables*/
+/*color de fondo para el header y footer*/
+/*color de fondo para el contenido de las páginas*/
+/*color de los bordes del contenido de las páginas y de los elementos del footer*/
+/*importo las propiedades generales del header, main y footer*/
+header {
+  margin-bottom: 10px;
+  background-color: #0d6efd; }
+  header .navbar .container-fluid .d-flex .navbar-brand .positionImg {
+    position: relative;
+    left: 7px; }
+  header .navbar .container-fluid .d-flex .positionApoyo {
+    position: relative;
+    top: 8px; }
+  @media screen and (min-width: 1200px) {
+    header .navbar .container-fluid #navbarNav .navbar-nav .nav-item {
+      padding: 0px 10px; } }
+  @media screen and (min-width: 1200px) {
+    header .navbar .container-fluid #navbarNav .navbar-nav .nav-item .nav-link {
+      border-radius: 5px; } }
+
+main {
+  padding: 0% 1%;
+  display: grid;
+  grid-template-areas: "seccionPrincipal" "aside";
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  /*quiero que el main sea una columna con una fila (para formato PC esto va a cambiar)*/ }
+  main .seccionPrincipal {
+    margin-bottom: 5px;
+    padding-bottom: 14px;
+    border-bottom: 2px dashed black; }
+    main .seccionPrincipal .articuloNuevo {
+      /*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
+      padding: 2%;
+      margin-top: 1rem;
+      display: grid;
+      grid-template-areas: "tituloArticulo     imagen" "subtituloArticulo  imagen";
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
+      justify-items: center;
+      align-items: center;
+      background-color: lightgray;
+      border: 3px solid black;
+      border-radius: 15px; }
+      main .seccionPrincipal .articuloNuevo h2 {
+        grid-area: tituloArticulo;
+        font-size: 1rem; }
+        main .seccionPrincipal .articuloNuevo h2 a {
+          text-decoration: none;
+          color: black; }
+        @media screen and (min-width: 768px) {
+          main .seccionPrincipal .articuloNuevo h2 {
+            font-size: 1.5rem; } }
+        @media screen and (min-width: 1200px) {
+          main .seccionPrincipal .articuloNuevo h2 {
+            font-size: 2rem; }
+            main .seccionPrincipal .articuloNuevo h2:hover {
+              text-decoration: underline 2px; } }
+      main .seccionPrincipal .articuloNuevo h3 {
+        grid-area: subtituloArticulo;
+        font-size: 0.9rem; }
+        @media screen and (min-width: 768px) {
+          main .seccionPrincipal .articuloNuevo h3 {
+            font-size: 1.25rem; } }
+      main .seccionPrincipal .articuloNuevo figure {
+        grid-area: imagen;
+        margin: 0px; }
+        main .seccionPrincipal .articuloNuevo figure img {
+          width: 100%;
+          height: 100%; }
+    main .seccionPrincipal .mt-2 .offcanvas .offcanvas-body div .fs-6 {
+      margin-top: 10px;
+      text-align: justify;
+      font-weight: bold;
+      color: black; }
+    @media screen and (min-width: 1200px) {
+      main .seccionPrincipal .mt-2 .offcanvas .offcanvas-body div {
+        font-size: 1.3rem; } }
+    @media screen and (min-width: 1200px) {
+      main .seccionPrincipal {
+        padding-right: 17px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        border-bottom: 0px dashed black;
+        width: 100%;
+        border-right: 2px dashed black; } }
+  main aside {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; }
+    main aside .articuloAzar {
+      margin-top: 1rem;
+      padding: 10px;
+      background-color: lightgray;
+      border: solid 3px black;
+      border-radius: 10px; }
+      main aside .articuloAzar h3 {
+        font-size: 1.25rem; }
+        main aside .articuloAzar h3 a {
+          color: black;
+          text-decoration: none; }
+        @media screen and (min-width: 768px) {
+          main aside .articuloAzar h3 {
+            font-size: 1.4rem; } }
+      main aside .articuloAzar h4 {
+        font-size: 1rem; }
+        @media screen and (min-width: 768px) {
+          main aside .articuloAzar h4 {
+            font-size: 1.2rem; } }
+      @media screen and (min-width: 1200px) {
+        main aside .articuloAzar {
+          transition: all 0.5s; }
+          main aside .articuloAzar:hover {
+            transform: scale(1.1);
+            /*cuando paso el mouse por arriba se agranda la etiqueta con clase "articuloAzar"*/ }
+          main aside .articuloAzar h3:hover {
+            text-decoration: underline 2px; } }
+    @media screen and (min-width: 768px) {
+      main aside {
+        font-size: 2rem; } }
+    @media screen and (min-width: 1200px) {
+      main aside {
+        justify-content: space-between;
+        width: 100%; } }
+  @media screen and (min-width: 1200px) {
+    main {
+      grid-template-areas: "seccionPrincipal" "aside";
+      /*reorganizo el main para formato PC*/
+      grid-template-rows: 1fr;
+      grid-template-columns: 3fr 1fr;
+      column-gap: 20px; } }
+
+footer {
+  display: flex;
+  margin-top: 10px;
+  background-color: #0d6efd; }
+  @media screen and (max-width: 768px) {
+    footer div a p {
+      display: none;
+      /*quito el texto del footer para formato mobile*/ } }
+  @media screen and (min-width: 768px) {
+    footer div a p {
+      display: inline-block;
+      /*el texto en el footer deja de estar oculto en tablet y PC*/
+      font-weight: bold;
+      color: black;
+      margin: 0px; } }
+  @media screen and (min-width: 768px) {
+    footer div a {
+      margin: 5px 0px;
+      padding: 5px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      border: 2px solid black;
+      text-decoration: none;
+      border-radius: 5px; } }
+  @media screen and (min-width: 768px) {
+    footer {
+      width: 100%;
+      justify-content: space-evenly; } }
+
+/*importo las propiedades personalizadas de las secciones recomendaciones y contacto*/
+main .seccionPrincipal div p {
+  text-align: justify;
+  font-weight: bold; }
+
+main .seccionPrincipal .linksRecomendaciones {
+  /*similar a las propiedades de la clase "articuloNuevo"*/
+  padding: 2%;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  background-color: lightgray;
+  border: 3px solid black;
+  border-radius: 10px; }
+  main .seccionPrincipal .linksRecomendaciones h2 {
+    font-size: 1rem;
+    grid-column: 1 / span 2; }
+    @media screen and (min-width: 768px) {
+      main .seccionPrincipal .linksRecomendaciones h2 {
+        font-size: 1.74rem; } }
+    @media screen and (min-width: 1200px) {
+      main .seccionPrincipal .linksRecomendaciones h2 {
+        font-size: 2.33rem; } }
+  main .seccionPrincipal .linksRecomendaciones ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-evenly; }
+    main .seccionPrincipal .linksRecomendaciones ul li {
+      list-style-type: none;
+      text-align: center; }
+      main .seccionPrincipal .linksRecomendaciones ul li h3 {
+        font-size: 1.2rem; }
+        main .seccionPrincipal .linksRecomendaciones ul li h3 a {
+          text-decoration: none;
+          color: black; }
+          @media screen and (min-width: 1200px) {
+            main .seccionPrincipal .linksRecomendaciones ul li h3 a:hover {
+              text-decoration: underline 2px; } }
+        @media screen and (min-width: 768px) {
+          main .seccionPrincipal .linksRecomendaciones ul li h3 {
+            font-size: 1.5rem; } }
+        @media screen and (min-width: 1200px) {
+          main .seccionPrincipal .linksRecomendaciones ul li h3 {
+            font-size: 2.1rem; } }
+  main .seccionPrincipal .linksRecomendaciones figure img {
+    width: 100%; }
+  @media screen and (min-width: 1200px) {
+    main .seccionPrincipal .linksRecomendaciones {
+      grid-template-rows: 1fr 4fr;
+      /*le quito un poco de espacio a los h2 de "linksRecomendaciones"*/ } }
+
+main #contacto article {
+  margin-top: 1rem; }
+  main #contacto article form {
+    /*inspirado en las propiedades de la clase "articuloNuevo"*/
+    padding: 0px 10px;
+    background-color: lightgray;
+    border: solid 3px black;
+    border-radius: 10px;
+    height: 75vh; }
+    main #contacto article form * {
+      font-size: 0.8rem; }
+      @media screen and (min-width: 768px) {
+        main #contacto article form * {
+          font-size: 1rem; } }
+    main #contacto article form .container div div input {
+      padding: 0.1rem;
+      width: 75%; }
+    main #contacto article form .container div div textarea {
+      padding: 0.1rem;
+      display: block;
+      width: 100%;
+      height: 175px; }
