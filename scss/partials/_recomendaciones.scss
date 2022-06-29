@@ -4,20 +4,18 @@ main{
             p{
                 text-align: justify;
                 font-weight: bold;
+                font-size: 1.25rem;
+                color: black;
             }
         }
 
-        .linksRecomendaciones{ /*similar a las propiedades de la clase "articuloNuevo"*/
-            padding: 2%;
-            margin-top: 1rem;
+        .linksRecomendaciones{
+            @extend .aspectoCajas;
             display: grid;
             grid-template-rows: 1fr 3fr;
             grid-template-columns: 1fr 1fr;
             justify-items: center;
             align-items: center;
-            background-color: rgb(211, 211, 211);
-            border: 3px solid $color-borde;
-            border-radius: 10px;
         
             h2{
                 font-size: 1rem;

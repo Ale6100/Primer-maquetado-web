@@ -4,10 +4,8 @@ main{
             margin-top: 1rem;
         
             form{ /*inspirado en las propiedades de la clase "articuloNuevo"*/
+                @extend .aspectoCajas;
                 padding: 0px 10px;
-                background-color: rgb(211, 211, 211);
-                border: solid 3px $color-borde;
-                border-radius: 10px;
                 height: 75vh;                 
             
                 *{

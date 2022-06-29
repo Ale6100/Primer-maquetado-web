@@ -5,13 +5,16 @@
     box-sizing: border-box;
 }
 
+@import 'base/base'; /*importo "base" donde coloco las variables, mixin, mapas y clases para usar con extend*/
+
 html{
     font-size: 16px; /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/
 
     body{
-        display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
-        flex-direction: column; /*los elementos hijos se organizarán en una sola columna*/
-        background-color:  rgb(45, 105, 150);
+        @include flexbox(column, space-between); /*aplico el mixin*/
+        /*display: flex; el body es un contenedor compuesto por el header, main y footer*/
+        /*flex-direction: column; los elementos hijos se organizarán en una sola columna*/
+        background-color: rgb(92, 125, 200);
     }
 }
 
@@ -23,7 +26,7 @@ h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 
 
 @media screen and (min-width: 1200px){ /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
     .seleccion{
-        background-color: rgb(0, 0, 255);
+        background-color: map-get($colores, azul); /*uso el mapa*/
     }
 
     .hoverr{
@@ -38,9 +41,6 @@ h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 
         }
     }
 }
-
-/*importo "base" que actualmente solo la uso para definir variables*/
-@import 'base/base'; 
 
 /*importo las propiedades generales del header, main y footer*/
 @import 'partials/header';

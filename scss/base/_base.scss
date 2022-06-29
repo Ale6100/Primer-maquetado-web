@@ -5,4 +5,35 @@ $bg-color-header-footer: rgb(13, 110, 253);
 $bg-color-articulos: rgb(211, 211, 211);
 
 /*color de los bordes del contenido de las páginas y de los elementos del footer*/
-$color-borde: rgb(0, 0, 0)
+$color-borde: rgb(0, 0, 0);
+
+/*aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
+.aspectoCajas{/*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
+    padding: 2%;
+    margin-top: 1rem;
+    background-color: $bg-color-articulos;
+    border: 3px solid $color-borde;
+    border-radius: 15px;    
+};
+
+/*después de esta entrega pienso borrar el siguiente mapa y mixin. Solo los coloco para que se entienda que aprendía usarlo*/
+
+/*uso de un mapa. Este mapa lo usé en style.css para colorear la clase "seleccion"*/
+$colores:(
+    rojo: rgb(255, 0, 0),
+    azul: rgb(0, 0, 255),
+    amarillo: rgb(255, 255, 0),
+    verde: rgb(0, 255, 0),
+    blanco: rgb(255, 255, 255),
+    negro: rgb(0, 0, 0),
+    gris: rgb(128, 128, 128),
+    cyan: rgb(0, 255, 255),
+    fucsia: rgb(255, 0, 255)
+);
+
+/*uso de un mixin con dos parámetros opcionales*/
+@mixin flexbox($direction: row, $j-c: space-between){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $j-c;
+}

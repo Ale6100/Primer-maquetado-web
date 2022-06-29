@@ -12,9 +12,8 @@ main{
         padding-bottom: 14px;
         border-bottom: 2px dashed rgb(0, 0, 0);
     
-        .articuloNuevo{/*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
-            padding: 2%;
-            margin-top: 1rem;
+        .articuloNuevo{
+            @extend .aspectoCajas;
             display: grid;
             grid-template-areas:  
             "tituloArticulo     imagen"
@@ -23,9 +22,6 @@ main{
             grid-template-columns: 2fr 1fr;
             justify-items: center;
             align-items: center;
-            background-color: $bg-color-articulos;
-            border: 3px solid $color-borde;
-            border-radius: 15px;
         
             h2{
                 grid-area: tituloArticulo;
@@ -69,11 +65,11 @@ main{
             }
         }
 
-        .mt-2{
+        .miOffcanvas{
             .offcanvas{
                 .offcanvas-body{
                     div{
-                        .fs-6{
+                        .p{
                             margin-top: 10px;
                             text-align: justify;
                             font-weight: bold;
@@ -105,12 +101,9 @@ main{
         align-items: center;
 
         .articuloAzar{
-            margin-top: 1rem;
+            @extend .aspectoCajas; /*agrego un extend que atraiga las propiedades de "aspectoCajas", pero luego pido que use otro padding*/
             padding: 10px;
-            background-color: $bg-color-articulos;
-            border: solid 3px $color-borde;
-            border-radius: 10px;
-        
+
             h3{
                 font-size: 1.25rem;
             
