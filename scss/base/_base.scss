@@ -1,3 +1,37 @@
+html{
+    font-size: 16px; /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/
+
+    body{
+        display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
+        flex-direction: column; /*los elementos hijos se organizarán en una sola columna*/
+        background-color: rgb(92, 125, 200);
+    }
+}
+
+h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 1 a 4) inicien con estas propiedades*/
+    text-align: center;
+    margin: 0px;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (min-width: 1200px){ /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
+    .seleccion{
+        background-color: blue;
+    }
+
+    .hoverr{
+        transition: all 0.5s;
+        &:hover{
+            background-color: rgb(86, 86, 139); 
+        }
+
+        &:active{ /*cambié focus por active*/
+            background-color: rgb(0, 200, 200);
+            color: black;
+        }
+    }
+}
+
 /*color de fondo para el header y footer*/
 $bg-color-header-footer: rgb(13, 110, 253);
 
@@ -15,25 +49,3 @@ $color-borde: rgb(0, 0, 0);
     border: 3px solid $color-borde;
     border-radius: 15px;    
 };
-
-/*después de esta entrega pienso borrar el siguiente mapa y mixin. Solo los coloco para que se entienda que aprendía usarlo*/
-
-/*uso de un mapa. Este mapa lo usé en style.css para colorear la clase "seleccion"*/
-$colores:(
-    rojo: rgb(255, 0, 0),
-    azul: rgb(0, 0, 255),
-    amarillo: rgb(255, 255, 0),
-    verde: rgb(0, 255, 0),
-    blanco: rgb(255, 255, 255),
-    negro: rgb(0, 0, 0),
-    gris: rgb(128, 128, 128),
-    cyan: rgb(0, 255, 255),
-    fucsia: rgb(255, 0, 255)
-);
-
-/*uso de un mixin con dos parámetros opcionales*/
-@mixin flexbox($direction: row, $j-c: space-between){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $j-c;
-}

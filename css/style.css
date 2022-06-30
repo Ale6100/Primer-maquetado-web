@@ -5,32 +5,15 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   box-sizing: border-box; }
 
-/*color de fondo para el header y footer*/
-/*color de fondo para el contenido de las páginas*/
-/*color de los bordes del contenido de las páginas y de los elementos del footer*/
-/*aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
-.aspectoCajas, main .seccionPrincipal .articuloNuevo, main aside .articuloAzar, main .seccionPrincipal .linksRecomendaciones, main #contacto article form {
-  /*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
-  padding: 2%;
-  margin-top: 1rem;
-  background-color: lightgray;
-  border: 3px solid black;
-  border-radius: 15px; }
-
-/*después de esta entrega pienso borrar el siguiente mapa y mixin. Solo los coloco para que se entienda que aprendía usarlo*/
-/*uso de un mapa. Este mapa lo usé en style.css para colorear la clase "seleccion"*/
-/*uso de un mixin con dos parámetros opcionales*/
 /*importo "base" donde coloco las variables, mixin, mapas y clases para usar con extend*/
 html {
   font-size: 16px;
   /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/ }
   html body {
     display: flex;
+    /*el body es un contenedor compuesto por el header, main y footer*/
     flex-direction: column;
-    justify-content: space-between;
-    /*aplico el mixin*/
-    /*display: flex; el body es un contenedor compuesto por el header, main y footer*/
-    /*flex-direction: column; los elementos hijos se organizarán en una sola columna*/
+    /*los elementos hijos se organizarán en una sola columna*/
     background-color: #5c7dc8; }
 
 h1, h2, h3, h4 {
@@ -42,8 +25,7 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 1200px) {
   /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
   .seleccion {
-    background-color: blue;
-    /*uso el mapa*/ }
+    background-color: blue; }
   .hoverr {
     transition: all 0.5s; }
     .hoverr:hover {
@@ -52,6 +34,18 @@ h1, h2, h3, h4 {
       /*cambié focus por active*/
       background-color: #00c8c8;
       color: black; } }
+
+/*color de fondo para el header y footer*/
+/*color de fondo para el contenido de las páginas*/
+/*color de los bordes del contenido de las páginas y de los elementos del footer*/
+/*aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
+.aspectoCajas, main .seccionPrincipal .articuloNuevo, main aside .articuloAzar, main .seccionPrincipal .linksRecomendaciones, main #contacto article form {
+  /*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
+  padding: 2%;
+  margin-top: 1rem;
+  background-color: lightgray;
+  border: 3px solid black;
+  border-radius: 15px; }
 
 /*importo las propiedades generales del header, main y footer*/
 header {
@@ -113,7 +107,8 @@ main {
         margin: 0px; }
         main .seccionPrincipal .articuloNuevo figure img {
           width: 100%;
-          height: 100%; }
+          height: 100%;
+          border-radius: 3%; }
     main .seccionPrincipal .miOffcanvas .offcanvas .offcanvas-body div .p {
       margin-top: 10px;
       text-align: justify;
@@ -139,18 +134,20 @@ main {
       /*agrego un extend que atraiga las propiedades de "aspectoCajas", pero luego pido que use otro padding*/
       padding: 10px; }
       main aside .articuloAzar h3 {
-        font-size: 1.25rem; }
+        font-size: 1.25rem;
+        margin-bottom: 10px; }
         main aside .articuloAzar h3 a {
           color: black;
           text-decoration: none; }
         @media screen and (min-width: 768px) {
           main aside .articuloAzar h3 {
-            font-size: 1.4rem; } }
+            font-size: 1.4rem;
+            margin-bottom: 15px; } }
       main aside .articuloAzar h4 {
-        font-size: 1rem; }
+        font-size: 0.9rem; }
         @media screen and (min-width: 768px) {
           main aside .articuloAzar h4 {
-            font-size: 1.2rem; } }
+            font-size: 1rem; } }
       @media screen and (min-width: 1200px) {
         main aside .articuloAzar {
           transition: all 0.5s; }
@@ -205,9 +202,9 @@ footer {
       justify-content: space-evenly; } }
 
 /*importo las propiedades personalizadas de las secciones recomendaciones y contacto*/
-main .seccionPrincipal div p {
+main .seccionPrincipal .textoPresentacion p {
   text-align: justify;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 1.25rem;
   color: black; }
 
@@ -251,7 +248,9 @@ main .seccionPrincipal .linksRecomendaciones {
           main .seccionPrincipal .linksRecomendaciones ul li h3 {
             font-size: 2.1rem; } }
   main .seccionPrincipal .linksRecomendaciones figure img {
-    width: 100%; }
+    width: 100%;
+    height: 100%;
+    border-radius: 3%; }
   @media screen and (min-width: 1200px) {
     main .seccionPrincipal .linksRecomendaciones {
       grid-template-rows: 1fr 4fr;
@@ -268,6 +267,8 @@ main #contacto article {
       @media screen and (min-width: 768px) {
         main #contacto article form * {
           font-size: 1rem; } }
+    main #contacto article form .container div div p {
+      font-weight: bold; }
     main #contacto article form .container div div input {
       padding: 0.1rem;
       width: 75%; }
