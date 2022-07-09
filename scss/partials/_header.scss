@@ -3,17 +3,35 @@ header{
     background-color: $bg-color-header-footer;
     nav{
         div{
-            .d-flex{
+            .iconoTitulo{
                 .navbar-brand{
                     .positionImg{
                         position:relative;
-                        left: 7px;
+                        left: 5px;
                     }
                 }
 
                 .positionApoyo{
                     position: relative;
                     top: 8px;
+                    font-size: 1.25rem;
+                    @media screen and (max-width: 388px){
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+
+            .barraBuscador{
+                input{
+                    @media screen and (max-width: 388px){
+                        font-size: 0.95rem;
+                    }
+                }
+
+                button{
+                    @media screen and (max-width: 388px){
+                        font-size: 0.95rem;
+                    }
                 }
             }
 

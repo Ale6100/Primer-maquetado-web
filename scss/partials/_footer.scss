@@ -1,37 +1,37 @@
 footer{
-    display: flex;
     margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     background-color: $bg-color-header-footer;
     div{
         a{
+            margin: 3px 0px;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid $color-borde;
+            border-radius: 5px;
+            background-color: white; 
             p{
                 @media screen and (max-width: 768px){
                     display: none; /*quito el texto del footer para formato mobile*/
                 }
 
                 @media screen and (min-width: 768px){
+                    margin: 0px;
                     display: inline-block; /*el texto en el footer deja de estar oculto en tablet y PC*/
                     font-weight: bold;
                     color: rgb(0, 0, 0);
-                    margin: 0px;
                 }
             }
         
             @media screen and (min-width: 768px){
                 margin: 5px 0px;
                 padding: 5px;
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                border: 2px solid $color-borde;
                 text-decoration: none;
-                border-radius: 5px;
             }
         }
-    }
-
-    @media screen and (min-width: 768px){
-        width: 100%;
-        justify-content: space-evenly;
     }
 }

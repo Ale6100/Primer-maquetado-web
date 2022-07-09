@@ -4,7 +4,7 @@ html{
     body{
         display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
         flex-direction: column; /*los elementos hijos se organizarán en una sola columna*/
-        background-color: rgb(92, 125, 200);
+        background-color: white;
     }
 }
 
@@ -16,7 +16,7 @@ h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 
 
 @media screen and (min-width: 1200px){ /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
     .seleccion{
-        background-color: blue;
+        background-color: rgb(0, 65, 87);
     }
 
     .hoverr{
@@ -33,10 +33,10 @@ h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 
 }
 
 /*color de fondo para el header y footer*/
-$bg-color-header-footer: rgb(13, 110, 253);
+$bg-color-header-footer:  #0d6efd;
 
 /*color de fondo para el contenido de las páginas*/
-$bg-color-articulos: rgb(211, 211, 211);
+$bg-color-articulos: rgb(210, 210, 210);
 
 /*color de los bordes del contenido de las páginas y de los elementos del footer*/
 $color-borde: rgb(0, 0, 0);
@@ -47,5 +47,6 @@ $color-borde: rgb(0, 0, 0);
     margin-top: 1rem;
     background-color: $bg-color-articulos;
     border: 3px solid $color-borde;
-    border-radius: 15px;    
+    border-radius: 15px;
+    width: 100%
 };

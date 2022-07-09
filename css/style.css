@@ -14,7 +14,7 @@ html {
     /*el body es un contenedor compuesto por el header, main y footer*/
     flex-direction: column;
     /*los elementos hijos se organizarán en una sola columna*/
-    background-color: #5c7dc8; }
+    background-color: white; }
 
 h1, h2, h3, h4 {
   /*Defino estos h acá ya que quiero que todos los h que uso (de 1 a 4) inicien con estas propiedades*/
@@ -25,7 +25,7 @@ h1, h2, h3, h4 {
 @media screen and (min-width: 1200px) {
   /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
   .seleccion {
-    background-color: blue; }
+    background-color: #004157; }
   .hoverr {
     transition: all 0.5s; }
     .hoverr:hover {
@@ -43,20 +43,31 @@ h1, h2, h3, h4 {
   /*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
   padding: 2%;
   margin-top: 1rem;
-  background-color: lightgray;
+  background-color: #d2d2d2;
   border: 3px solid black;
-  border-radius: 15px; }
+  border-radius: 15px;
+  width: 100%; }
 
 /*importo las propiedades generales del header, main y footer*/
 header {
   margin-bottom: 10px;
   background-color: #0d6efd; }
-  header nav div .d-flex .navbar-brand .positionImg {
+  header nav div .iconoTitulo .navbar-brand .positionImg {
     position: relative;
-    left: 7px; }
-  header nav div .d-flex .positionApoyo {
+    left: 5px; }
+  header nav div .iconoTitulo .positionApoyo {
     position: relative;
-    top: 8px; }
+    top: 8px;
+    font-size: 1.25rem; }
+    @media screen and (max-width: 388px) {
+      header nav div .iconoTitulo .positionApoyo {
+        font-size: 0.95rem; } }
+  @media screen and (max-width: 388px) {
+    header nav div .barraBuscador input {
+      font-size: 0.95rem; } }
+  @media screen and (max-width: 388px) {
+    header nav div .barraBuscador button {
+      font-size: 0.95rem; } }
   @media screen and (min-width: 1200px) {
     header nav div #navbarNav .navbar-nav .nav-item {
       padding: 0px 10px; } }
@@ -109,6 +120,9 @@ main {
           width: 100%;
           height: 100%;
           border-radius: 3%; }
+    main .seccionPrincipal .miOffcanvas .btn {
+      border: 1px solid black;
+      border-radius: 10%; }
     main .seccionPrincipal .miOffcanvas .offcanvas .offcanvas-body div .p {
       margin-top: 10px;
       text-align: justify;
@@ -172,41 +186,45 @@ main {
       column-gap: 20px; } }
 
 footer {
-  display: flex;
   margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
   background-color: #0d6efd; }
-  @media screen and (max-width: 768px) {
-    footer div a p {
-      display: none;
-      /*quito el texto del footer para formato mobile*/ } }
-  @media screen and (min-width: 768px) {
-    footer div a p {
-      display: inline-block;
-      /*el texto en el footer deja de estar oculto en tablet y PC*/
-      font-weight: bold;
-      color: black;
-      margin: 0px; } }
-  @media screen and (min-width: 768px) {
-    footer div a {
-      margin: 5px 0px;
-      padding: 5px;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      border: 2px solid black;
-      text-decoration: none;
-      border-radius: 5px; } }
-  @media screen and (min-width: 768px) {
-    footer {
-      width: 100%;
-      justify-content: space-evenly; } }
+  footer div a {
+    margin: 3px 0px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white; }
+    @media screen and (max-width: 768px) {
+      footer div a p {
+        display: none;
+        /*quito el texto del footer para formato mobile*/ } }
+    @media screen and (min-width: 768px) {
+      footer div a p {
+        margin: 0px;
+        display: inline-block;
+        /*el texto en el footer deja de estar oculto en tablet y PC*/
+        font-weight: bold;
+        color: black; } }
+    @media screen and (min-width: 768px) {
+      footer div a {
+        margin: 5px 0px;
+        padding: 5px;
+        text-decoration: none; } }
 
 /*importo las propiedades personalizadas de las secciones recomendaciones y contacto*/
-main .seccionPrincipal .textoPresentacion p {
-  text-align: justify;
-  font-weight: normal;
-  font-size: 1.25rem;
-  color: black; }
+main .seccionPrincipal .textoPresentacion {
+  margin-top: 0.5rem; }
+  main .seccionPrincipal .textoPresentacion p {
+    text-align: justify;
+    font-weight: normal;
+    font-size: 1.25rem;
+    color: black; }
 
 main .seccionPrincipal .linksRecomendaciones {
   display: grid;
@@ -271,9 +289,11 @@ main #contacto article {
       font-weight: bold; }
     main #contacto article form .container div div input {
       padding: 0.1rem;
-      width: 75%; }
+      width: 75%;
+      background-color: white; }
     main #contacto article form .container div div textarea {
       padding: 0.1rem;
       display: block;
       width: 100%;
-      height: 175px; }
+      height: 175px;
+      background-color: white; }

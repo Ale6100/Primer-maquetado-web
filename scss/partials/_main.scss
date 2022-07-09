@@ -67,6 +67,11 @@ main{
         }
 
         .miOffcanvas{
+            .btn{
+                border: 1px solid black;
+                border-radius: 10%;
+            }
+
             .offcanvas{
                 .offcanvas-body{
                     div{
