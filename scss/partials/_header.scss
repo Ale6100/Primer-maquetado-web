@@ -1,49 +1,57 @@
-header{
+header {
     margin-bottom: 10px;
     background-color: $bg-color-header-footer;
-    nav{
-        div{
-            .iconoTitulo{
-                .navbar-brand{
-                    .positionImg{
+
+    nav {
+        .container-fluid {
+            @media screen and (max-width: 405px) {
+                padding: 0px 1px;
+            }
+
+            .iconoTitulo {
+                .navbar-brand {
+                    .positionImg {
                         position:relative;
                         left: 5px;
                     }
                 }
 
-                .positionApoyo{
+                .positionApoyo {
                     position: relative;
                     top: 8px;
                     font-size: 1.25rem;
-                    @media screen and (max-width: 388px){
+
+                    @media screen and (max-width: 388px) {
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .barraBuscador {
+                input {
+                    @media screen and (max-width: 388px) {
+                        font-size: 0.95rem;
+                    }
+                }
+
+                button {
+                    font-weight: 500;
+
+                    @media screen and (max-width: 388px) {
                         font-size: 0.95rem;
                     }
                 }
             }
 
-            .barraBuscador{
-                input{
-                    @media screen and (max-width: 388px){
-                        font-size: 0.95rem;
-                    }
-                }
-
-                button{
-                    @media screen and (max-width: 388px){
-                        font-size: 0.95rem;
-                    }
-                }
-            }
-
-            #navbarNav{
-                .navbar-nav{
-                    .nav-item{
-                        @media screen and (min-width: 1200px){
+            #navbarNav {
+                .navbar-nav {
+                    .nav-item {
+                        @media screen and (min-width: 1200px) {
                             padding: 0px 10px; 
                         }
                         
                         .nav-link{
-                            @media screen and (min-width: 1200px){
+                            @media screen and (min-width: 1200px) {
                                 border-radius: 5px; 
                             }
                         }

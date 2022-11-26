@@ -8,12 +8,11 @@
 /*importo "base" donde coloco las variables, mixin, mapas y clases para usar con extend*/
 html {
   font-size: 16px;
-  /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/ }
+  /*La unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/ }
   html body {
     display: flex;
-    /*el body es un contenedor compuesto por el header, main y footer*/
+    /*El body es un contenedor compuesto por el header, main y footer*/
     flex-direction: column;
-    /*los elementos hijos se organizarán en una sola columna*/
     background-color: white; }
 
 h1, h2, h3, h4 {
@@ -23,7 +22,7 @@ h1, h2, h3, h4 {
   color: black; }
 
 @media screen and (min-width: 1200px) {
-  /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
+  /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" están en varias etiquetas distintas*/
   .seleccion {
     background-color: #004157; }
   .hoverr {
@@ -35,12 +34,12 @@ h1, h2, h3, h4 {
       background-color: #00c8c8;
       color: black; } }
 
-/*color de fondo para el header y footer*/
-/*color de fondo para el contenido de las páginas*/
-/*color de los bordes del contenido de las páginas y de los elementos del footer*/
-/*aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
+/*Color de fondo para el header y footer*/
+/*Color de fondo para el contenido de las páginas*/
+/*Color de los bordes del contenido de las páginas y de los elementos del footer*/
+/*Aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
 .aspectoCajas, main .seccionPrincipal .articuloNuevo, main aside .articuloAzar, main .seccionPrincipal .linksRecomendaciones, main #contacto article form {
-  /*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
+  /*Este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
   padding: 2%;
   margin-top: 1rem;
   background-color: #d2d2d2;
@@ -52,27 +51,32 @@ h1, h2, h3, h4 {
 header {
   margin-bottom: 10px;
   background-color: #0d6efd; }
-  header nav div .iconoTitulo .navbar-brand .positionImg {
+  @media screen and (max-width: 405px) {
+    header nav .container-fluid {
+      padding: 0px 1px; } }
+  header nav .container-fluid .iconoTitulo .navbar-brand .positionImg {
     position: relative;
     left: 5px; }
-  header nav div .iconoTitulo .positionApoyo {
+  header nav .container-fluid .iconoTitulo .positionApoyo {
     position: relative;
     top: 8px;
     font-size: 1.25rem; }
     @media screen and (max-width: 388px) {
-      header nav div .iconoTitulo .positionApoyo {
+      header nav .container-fluid .iconoTitulo .positionApoyo {
+        font-size: 1rem; } }
+  @media screen and (max-width: 388px) {
+    header nav .container-fluid .barraBuscador input {
+      font-size: 0.95rem; } }
+  header nav .container-fluid .barraBuscador button {
+    font-weight: 500; }
+    @media screen and (max-width: 388px) {
+      header nav .container-fluid .barraBuscador button {
         font-size: 0.95rem; } }
-  @media screen and (max-width: 388px) {
-    header nav div .barraBuscador input {
-      font-size: 0.95rem; } }
-  @media screen and (max-width: 388px) {
-    header nav div .barraBuscador button {
-      font-size: 0.95rem; } }
   @media screen and (min-width: 1200px) {
-    header nav div #navbarNav .navbar-nav .nav-item {
+    header nav .container-fluid #navbarNav .navbar-nav .nav-item {
       padding: 0px 10px; } }
   @media screen and (min-width: 1200px) {
-    header nav div #navbarNav .navbar-nav .nav-item .nav-link {
+    header nav .container-fluid #navbarNav .navbar-nav .nav-item .nav-link {
       border-radius: 5px; } }
 
 main {

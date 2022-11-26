@@ -1,48 +1,48 @@
-html{
-    font-size: 16px; /*la unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/
+html {
+    font-size: 16px; /*La unidad rem es relativa a esta cantidad de pixeles, que por defecto suele ser 16*/
 
-    body{
-        display: flex; /*el body es un contenedor compuesto por el header, main y footer*/
-        flex-direction: column; /*los elementos hijos se organizarán en una sola columna*/
+    body {
+        display: flex; /*El body es un contenedor compuesto por el header, main y footer*/
+        flex-direction: column;
         background-color: white;
     }
 }
 
-h1, h2, h3, h4{ /*Defino estos h acá ya que quiero que todos los h que uso (de 1 a 4) inicien con estas propiedades*/
+h1, h2, h3, h4 { /*Defino estos h acá ya que quiero que todos los h que uso (de 1 a 4) inicien con estas propiedades*/
     text-align: center;
     margin: 0px;
     color: rgb(0, 0, 0);
 }
 
-@media screen and (min-width: 1200px){ /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" estarán en varias etiquetas distintas*/
+@media screen and (min-width: 1200px) { /*Defino estos estilos acá para minimizar espacio ya que "seleccion" y "hoverr" están en varias etiquetas distintas*/
     .seleccion{
         background-color: rgb(0, 65, 87);
     }
 
-    .hoverr{
+    .hoverr {
         transition: all 0.5s;
-        &:hover{
+        &:hover {
             background-color: rgb(86, 86, 139); 
         }
 
-        &:active{ /*cambié focus por active*/
+        &:active { /*cambié focus por active*/
             background-color: rgb(0, 200, 200);
             color: black;
         }
     }
 }
 
-/*color de fondo para el header y footer*/
+/*Color de fondo para el header y footer*/
 $bg-color-header-footer:  #0d6efd;
 
-/*color de fondo para el contenido de las páginas*/
+/*Color de fondo para el contenido de las páginas*/
 $bg-color-articulos: rgb(210, 210, 210);
 
-/*color de los bordes del contenido de las páginas y de los elementos del footer*/
+/*Color de los bordes del contenido de las páginas y de los elementos del footer*/
 $color-borde: rgb(0, 0, 0);
 
-/*aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
-.aspectoCajas{/*este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
+/*Aspecto general de las cajas (luego uso un extend para llamar a esta clase)*/
+.aspectoCajas { /*Este estilo de diseño lo uso como modelo para diseñar cajas en todas las páginas*/
     padding: 2%;
     margin-top: 1rem;
     background-color: $bg-color-articulos;
