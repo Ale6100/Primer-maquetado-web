@@ -30,7 +30,6 @@ h1, h2, h3, h4 {
     .hoverr:hover {
       background-color: #56568b; }
     .hoverr:active {
-      /*cambié focus por active*/
       background-color: #00c8c8;
       color: black; } }
 
@@ -168,9 +167,9 @@ main {
             font-size: 1rem; } }
       @media screen and (min-width: 1200px) {
         main aside .articuloAzar {
-          transition: all 0.5s; }
+          transition: all 0.2s; }
           main aside .articuloAzar:hover {
-            transform: scale(1.1);
+            transform: scale(0.975);
             /*cuando paso el mouse por arriba se agranda la etiqueta con clase "articuloAzar"*/ }
           main aside .articuloAzar h3:hover {
             text-decoration: underline 2px; } }

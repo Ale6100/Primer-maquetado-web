@@ -134,10 +134,10 @@ main{
             }
 
             @media screen and (min-width: 1200px){
-                transition: all 0.5s;
+                transition: all 0.2s;
                 
                 &:hover{
-                    transform: scale(1.1); /*cuando paso el mouse por arriba se agranda la etiqueta con clase "articuloAzar"*/
+                    transform: scale(0.975); /*cuando paso el mouse por arriba se agranda la etiqueta con clase "articuloAzar"*/
                 }
 
                 h3{
