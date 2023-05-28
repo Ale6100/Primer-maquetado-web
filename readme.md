@@ -18,17 +18,17 @@ Necesitas tener previamente descargado e instalado [NodeJs](https://nodejs.org/)
 
 Instala las dependencias con el comando
 
-```npm install```
+```
+npm install
+```
 
 ## Despliegue 📦
 
-Puedes simplemente abrir el archivo
+Puedes simplemente abrir el archivo `index.html` para visualizar el sitio terminado. Si deseas modificarlo no olvides escribir en la terminal
 
-```index.html```
-
-para abrir el proyecto. Si deseas modificarlo no olvides escribir en la terminal
-
-```npm run watch-css```
+```
+npm run watch-css
+```
 
 para compilar cada vez que haces un cambio en sass gracias a nodemon.
 
@@ -36,10 +36,10 @@ para compilar cada vez que haces un cambio en sass gracias a nodemon.
 
 * HTML
 * CSS
-* [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - v5.1
+* [Bootstrap](https://getbootstrap.com/)
 * [SASS](https://www.npmjs.com/package/node-sass)
 * [NodeJs](https://nodejs.org/)
 
-## Autores ✒️
+## Autor ✒️
 
 * **Alejandro Portaluppi** - [LinkedIn](https://www.linkedin.com/in/alejandro-portaluppi/)

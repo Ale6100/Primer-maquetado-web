@@ -1,35 +1,49 @@
-main{
-    #contacto{
-        article{
+main {
+    #contacto {
+        .aclaracion {
+            margin-top: 5px;
+            padding: 0px 5px;
+            text-align: justify;
+            font-weight: normal;
+            font-size: 1.25rem;
+            color: black;
+            font-style: oblique;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+            }
+        }
+
+        article {
             margin-top: 1rem;
         
-            form{ /*inspirado en las propiedades de la clase "articuloNuevo"*/
+            form { /*inspirado en las propiedades de la clase "articuloNuevo"*/
                 @extend .aspectoCajas;
                 padding: 0px 10px;
                 height: 75vh;                 
             
-                *{
+                * {
                     font-size: 0.8rem;
                 
-                    @media screen and (min-width: 768px){
+                    @media screen and (min-width: 768px) {
                         font-size: 1rem;
                     }
                 }
             
-                .container{
-                    div{
-                        div{
-                            p{
+                .container {
+                    div {
+                        div {
+                            p {
                                 font-weight: bold;
                             }
 
-                            input{
+                            input {
                                 padding: 0.1rem;
                                 width: 75%;
                                 background-color: white;
                             }
 
-                            textarea{
+                            textarea {
                                 padding: 0.1rem;
                                 display: block;
                                 width: 100%;

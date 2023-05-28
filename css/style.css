@@ -277,6 +277,18 @@ main .seccionPrincipal .linksRecomendaciones {
       grid-template-rows: 1fr 4fr;
       /*le quito un poco de espacio a los h2 de "linksRecomendaciones"*/ } }
 
+main #contacto .aclaracion {
+  margin-top: 5px;
+  padding: 0px 5px;
+  text-align: justify;
+  font-weight: normal;
+  font-size: 1.25rem;
+  color: black;
+  font-style: oblique; }
+  @media screen and (max-width: 768px) {
+    main #contacto .aclaracion {
+      font-size: 1rem; } }
+
 main #contacto article {
   margin-top: 1rem; }
   main #contacto article form {

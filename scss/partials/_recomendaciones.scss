@@ -1,8 +1,8 @@
-main{
-    .seccionPrincipal{
-        .textoPresentacion{
+main {
+    .seccionPrincipal {
+        .textoPresentacion {
             margin-top: 0.5rem;
-            p{
+            p {
                 text-align: justify;
                 font-weight: normal;
                 font-size: 1.25rem;
@@ -10,7 +10,7 @@ main{
             }
         }
 
-        .linksRecomendaciones{
+        .linksRecomendaciones {
             @extend .aspectoCajas;
             display: grid;
             grid-template-rows: 1fr 3fr;
@@ -18,20 +18,20 @@ main{
             justify-items: center;
             align-items: center;
         
-            h2{
+            h2 {
                 font-size: 1rem;
                 grid-column: 1 / span 2;
             
-                @media screen and (min-width: 768px){
+                @media screen and (min-width: 768px) {
                     font-size: 1.74rem;
                 }
             
-                @media screen and (min-width: 1200px){ 
+                @media screen and (min-width: 1200px) { 
                     font-size: 2.33rem;
                 }
             }
     
-            ul{
+            ul {
                 margin: 0px;
                 padding: 0px;
                 display: flex;
@@ -39,44 +39,44 @@ main{
                 height: 100%;
                 justify-content: space-evenly;
             
-                li{
+                li {
                     list-style-type: none;
                     text-align: center;
                 
-                    h3{
+                    h3 {
                         font-size: 1.2rem;
                     
-                        a{
+                        a {
                             text-decoration: none;
                             color: rgb(0, 0, 0);
                         
-                            @media screen and (min-width: 1200px){ 
-                                &:hover{
+                            @media screen and (min-width: 1200px) { 
+                                &:hover {
                                     text-decoration: underline 2px;
                                 }
                             }
                         }
                     
-                        @media screen and (min-width: 768px){
+                        @media screen and (min-width: 768px) {
                             font-size: 1.5rem;
                         }
                     
-                        @media screen and (min-width: 1200px){ 
+                        @media screen and (min-width: 1200px) { 
                             font-size: 2.1rem;                   
                         }
                     }
                 }
             }
     
-            figure{
-                img{
+            figure {
+                img {
                     width: 100%;
                     height: 100%;
                     border-radius: 3%;
                 }
             }
         
-            @media screen and (min-width: 1200px){ 
+            @media screen and (min-width: 1200px) { 
                 grid-template-rows: 1fr 4fr; /*le quito un poco de espacio a los h2 de "linksRecomendaciones"*/
             }
         }
